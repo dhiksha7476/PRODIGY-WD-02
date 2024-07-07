@@ -178,3 +178,18 @@ export default function About() {
       {/* <!--
           - clients
         --> */}
+                  <section className="clients">
+        <h3 className="h3 clients-title">Clients</h3>
+        <ul className="clients-list has-scrollbar">
+          {CLIENTS.map(({ img, name, href }) => (
+            <li className="clients-item" key={name}>
+              <Link href={href}>
+                <Image src={img} alt="client logo" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </article>
+  );
+}
